@@ -1,0 +1,10 @@
+apps:
+  - script   : './service_one/index.js'
+    name     : 'service_one'
+    exec_mode: 'cluster'
+    watch  : true
+    instances: 1
+  - script   : './service_two/index.js'
+    name     : 'service_two'
+    exec_mode: 'cluster'
+    watch  : true

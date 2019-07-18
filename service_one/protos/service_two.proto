@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+service serviceTwo {
+    rpc getData(DataObject) returns (ResponseObject) {}
+    rpc addUser(addUserObject) returns (ResponseObject) {}
+    rpc updateUser(addUserObject) returns (ResponseObject) {}
+    rpc deleteUser(addUserObject) returns (ResponseObject) {}
+}
+
+
+message DataObject {
+    string name = 1;
+    string email = 2;
+}
+
+message addUserObject {
+    string databaseName = 1;
+    string name = 2;
+    string email = 3;
+}
+
+message ResponseObject {
+    int32 status = 1;
+    string message = 2;
+}
